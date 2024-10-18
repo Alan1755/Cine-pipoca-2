@@ -1,0 +1,256 @@
+body {
+    background: linear-gradient(135deg, #000000 0%, #000000 0%, #000000 0%);
+    color: #fff;
+    margin: 0;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Estilo para os itens do menu */
+  .menu {
+    background: linear-gradient(#FFF)
+    display flex;
+    gap :30px; /* Espaçamento entre os links */
+  }
+  
+  .menu a {
+    color: rgb(255, 251, 0);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.6s ease;
+  }
+  
+  .menu a:hover {
+    background-color: #777777b2; /* Cor de fundo ao passar o mouse */
+    border-radius: 15px; /* Bordas arredondadas */
+  }
+  header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: #830400;
+  }
+  
+  .navbar .logo img {
+    height: 80px;
+  }
+  
+  
+  
+  .navbar .menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+  }
+  
+  .navbar .menu a:hover {
+    color: #FFD700;
+  }
+  
+  .search-bar {
+    background: rgba(0, 0, 0, 0.416)
+    border none;
+    color: #ffffff;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+  } 
+  
+  .search-bar::placeholder {
+    color: #bbb;
+  }
+  
+  .search-bar:focus {
+    background-color: #333;
+  }
+  
+  .search-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .search-btn i {
+    color: white;
+  }
+  
+  .search-btn:hover i {
+    color: #FFD700;
+  }
+  .menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff7f7;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(247, 2, 2, 0.384);
+  }
+  
+  .menu-btn:hover {
+    background-color: #ffee00;
+    transform: scale(1.1);
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    color: white;
+  }
+  
+  
+/*main vai ser aquiii */
+
+.container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .slider {
+    --items-per-screen: 5;
+    --slider-index: 0;
+    display: flex;
+    flex-grow: 1;
+    margin: 0 var(--img-gap);
+    transform: translateX(calc(var(--slider-index) * -100%));
+    transition: transform 250ms ease-in-out;
+    --img-gap: 5px;
+  }
+  
+  .slider > img {
+    flex: 0 0 calc(100% / var(--items-per-screen));
+    max-width: calc(100% / var(--items-per-screen));
+    aspect-ratio: 5 / 7;
+    padding: var(--img-gap);
+    border-radius: 1rem;
+  }
+  
+  .handle {
+    border: none;
+    border-radius: 8rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, .25);
+    z-index: 10;
+    margin: var(--img-gap) 0;
+    width: var(--handle-size);
+    height: 150px;
+    cursor: pointer;
+    font-size: 5rem;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    line-height: 0;
+    transition: background-color 150ms ease-in-out;
+  }
+  
+  .left-handle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .right-handle {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .handle:hover,
+  .handle:focus {
+    background-color: rgba(255, 255, 255, .5);
+  }
+  
+  .text {
+    transition: transform 150ms ease-in-out;
+  }
+  
+  .handle:hover .text,
+  .handle:focus .text {
+    transform: scale(1.2);
+  }
+  
+
+  footer {
+    background-color: rgba(2, 2, 2, 0);
+    padding: 40px 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Itim', cursive; /* Aplicando a fonte Itim */
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px; /* Garantindo que as seções não fiquem muito pequenas */
+  }
+  
+  .footer-section h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #FFD700; /* Cor dourada para os títulos */
+    text-transform: uppercase; /* Transformando os títulos em maiúsculas */
+  }
+  
+  .footer-section ul, .footer-section p {
+    font-size: 16px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #fffb00; /* Efeito de hover dourado */
+  }
+  
+  .footer-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #FFD700;
+    padding-top: 10px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    color: #FFD700;
+  }
