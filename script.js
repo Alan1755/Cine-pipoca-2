@@ -99,3 +99,47 @@ document.addEventListener("click", e => {
     }
   }
   
+
+  function searchMovies() {
+    const query = document.getElementById('search-bar').value.toLowerCase();
+    const sliders = document.querySelectorAll('.slider img'); // Seleciona todas as imagens
+    const noResultsMessage = document.getElementById('no-results-message'); // Mensagem de "nenhum resultado"
+    let hasResults = false;
+
+    sliders.forEach(img => {
+        const altText = img.alt ? img.alt.toLowerCase() : ''; // Verifica o texto alternativo da imagem
+        if (altText.includes(query)) {
+            img.style.display = "block";
+            hasResults = true; // Se alguma imagem corresponde, há resultados
+        } else {
+            img.style.display = "none";
+        }
+    });
+
+    // Exibe ou esconde a mensagem de "nenhum resultado"
+    if (noResultsMessage) {
+        noResultsMessage.style.display = hasResults ? "none" : "block";
+    }
+}
+// teste ainda !
+function searchMovies() {
+  const query = document.getElementById('search-bar').value.toLowerCase();
+  const sliders = document.querySelectorAll('.slider'); // Seleciona todas as imagens
+  const noResultsMessage = document.getElementById('no-results-message'); // Mensagem de "nenhum resultado"
+  let hasResults = false;
+
+  sliders.forEach(img => {
+      const altText = img.alt ? img.alt.toLowerCase() : ''; // Verifica o texto alternativo da imagem
+      if (altText.includes(query)) {
+          img.style.display = "block";
+          hasResults = true; // Se alguma imagem corresponde, há resultados
+      } else {
+          img.style.display = "none";
+      }
+  });
+
+  // Exibe ou esconde a mensagem de "nenhum resultado"
+  if (noResultsMessage) {
+      noResultsMessage.style.display = hasResults ? "none" : "block";
+  }
+}
